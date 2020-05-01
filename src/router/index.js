@@ -11,6 +11,22 @@ Vue.use(VueRouter)
     component: Home
   },
   {
+    path:'/carts',
+    name:'Carts',
+    component:()=>import(/* webpackChunkName: "carts" */ '../views/carts/Carts.vue'),
+    meta:{
+      title:'购物车',
+    }
+  },
+  {
+    path:'/showcarts',
+    name:'ShowCarts',
+    component:()=>import(/* webpackChunkName: "ShowCarts" */ '../views/carts/ShowCarts.vue'),
+    meta:{
+      title:'购物车列表展示',
+    }
+  },
+  {
     path: '/about',
     name: 'About',
     // route level code-splitting

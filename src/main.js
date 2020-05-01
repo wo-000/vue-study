@@ -5,6 +5,12 @@ import store from './store'
 
 Vue.config.productionTip = false
 
+//更改浏览器title
+router.beforeEach((to,from,next)=>{
+  window.document.title=to.meta.title==undefined?"首页":to.meta.title;
+  next();
+})
+
 new Vue({
   router,
   store,
